@@ -41,5 +41,18 @@ let swiftDescription = "Swift’s \(String(describing: pyDescription))"
 print("swiftDescription (conversion accomplished!): \(swiftDescription)")
 
 
+// Import Python libraries
+let plt = Python.import("matplotlib.pyplot")
+// Declare variables
+let x2 = np.linspace(0, 5, 50)
+let y2 = np.exp(x2)
+// Plot the values
+plt.xlabel("Values")
+plt.ylabel("Exponent of values")
+plt.title("Exponential Function")
+plt.plot(x2, y2, color: "violet")
+plt.show()
+
+
 
 
