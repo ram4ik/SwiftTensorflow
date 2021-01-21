@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D77505B25BA162500F7799D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77505A25BA162500F7799D /* main.swift */; };
+		1D77506425BA165C00F7799D /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D77506325BA165C00F7799D /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		1D77505725BA162500F7799D /* SwiftTensorflow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftTensorflow; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D77505A25BA162500F7799D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1D77506625BA298500F7799D /* SwiftTensorflow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftTensorflow.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D77506425BA165C00F7799D /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		1D77505925BA162500F7799D /* SwiftTensorflow */ = {
 			isa = PBXGroup;
 			children = (
+				1D77506625BA298500F7799D /* SwiftTensorflow.entitlements */,
 				1D77505A25BA162500F7799D /* main.swift */,
 			);
 			path = SwiftTensorflow;
@@ -78,6 +82,9 @@
 			dependencies = (
 			);
 			name = SwiftTensorflow;
+			packageProductDependencies = (
+				1D77506325BA165C00F7799D /* PythonKit */,
+			);
 			productName = SwiftTensorflow;
 			productReference = 1D77505725BA162500F7799D /* SwiftTensorflow */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +112,9 @@
 				Base,
 			);
 			mainGroup = 1D77504E25BA162500F7799D;
+			packageReferences = (
+				1D77506225BA165C00F7799D /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 1D77505825BA162500F7799D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +254,7 @@
 		1D77505F25BA162500F7799D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftTensorflow/SwiftTensorflow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8W86DZDY2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +266,7 @@
 		1D77506025BA162500F7799D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftTensorflow/SwiftTensorflow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8W86DZDY2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -285,6 +297,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D77506225BA165C00F7799D /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D77506325BA165C00F7799D /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D77506225BA165C00F7799D /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D77504F25BA162500F7799D /* Project object */;
 }
